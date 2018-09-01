@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+
+    <meta charset="utf-8" />
+
+    <!-- mobile meta (hooray!) -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <title>Designed For India</title>
+    <meta name="title" content="">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content=" " />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <script> window.prerenderReady = false; </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <!-- Our Styles -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+
+
+    <!-- Icons & Favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+    <!-- Apple touch icon (for more: http://mathiasbynens.be/notes/touch-icons) -->
+    <link rel="apple-touch-icon-precomposed" href="">
+    <!-- Safari, Chrome, Firefox, Opera -->
+    <link rel="icon" href="css/favicon.png?v=2">
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+    <!-- or, set /favicon.ico for IE10 win -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="">
+</head>
+
+<body>
+<div id="root"></div>
+<header class="c-ui">
+    <a href="/" data-href="/" class="js-constant-anchor c-ui__logo js-invert">
+        <img src="images/title.svg">
+    </a>
+    <div class="c-ui__off-canvas">
+        <ul class="c-ui__off-canvas-nav-items">
+            <li class="c-ui__off-canvas-nav-item">
+                <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-cases" data-href="/work" href="/work">Work</a>
+            </li>
+            <li class="c-ui__off-canvas-nav-item">
+                <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-about" data-href="/about" href="/about">About</a>
+            </li>
+            <li class="c-ui__off-canvas-nav-item">
+                <a class="c-ui__off-canvas-nav-item-anchor js-constant-anchor c-anchor js-mobile-nav-item-contact" data-href="/contact" href="/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="c-falling-cubes">
+    <div class="c-falling-cubes__container"></div>
+    <div class="c-falling-cubes__overlay"></div>
+</div>
+
+
+<div class="c-app-wrapper">
+    <div class="o-section o-section--landing c-app-wrapper__inner">
+        <div  style="background:#59f249; width: 5000px"></div>
+    </div>
+
+</div>
+
+<div class="c-overlay-mask"></div>
+<div class="c-loader">
+    <canvas class="c-loader__canvas"></canvas>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/build.js"></script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("firstNameInput").value;
+        document.getElementById("demo").innerHTML = "Hi, "+ x + "!";
+    }
+
+    function registerFunction() {
+        create_custom_dropdowns();
+        document.getElementById("universityDropdown").classList.toggle("showUni");
+        openList();
+        form = document.getElementById("myform");
+        button = document.getElementById("registerButton");
+        form.style.display = "block";
+        button.style.display = "none";
+
+        $(document).ready(function () {
+            $('.list').mousewheel(function(e, delta) {
+                this.scrollTop -= (delta);
+                e.preventDefault();
+            });
+        });
+    }
+
+    function mobileFunction() {
+        document.getElementById("mobileDropdown").classList.toggle("show");
+        document.getElementById("mobileDropdown").addEventListener("click", function(){
+            var sel = document.querySelector('input[name="mobile"]:checked').value;
+            document.getElementById("mobileDeviceInput").value = sel;
+            document.getElementById("mobileDropdown").classList.remove("show");
+        });
+    }
+
+    function ageFunction() {
+        document.getElementById("ageDropdown").classList.toggle("show");
+        document.getElementById("ageDropdown").addEventListener("click", function(){
+            var sel = document.querySelector('input[name="age"]:checked').value;
+            document.getElementById("ageInput").value = sel;
+            document.getElementById("ageDropdown").classList.remove("show");
+
+        });
+    }
+
+    function universityFunction() {
+        create_custom_dropdowns();
+        document.getElementById("universityDropdown").classList.toggle("show");
+        var e = document.getElementById("current").innerHTML;
+        openList();
+
+        $(document).ready(function () {
+            $('.list').mousewheel(function(e, delta) {
+                this.scrollTop -= (delta);
+                e.preventDefault();
+            });
+
+        });
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                   openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+
+</script>
+<script>
+    function openList(){
+        $('.dropdown mycontainer show').toggleClass('open');
+    }
+
+    function create_custom_dropdowns() {
+
+        $('select').each(function(i, select) {
+            if (!$(this).next().hasClass('dropdown')) {
+                $(this).after('<div class="dropdown ' + ($(this).attr('class') || '') + '" tabindex="0" id="universityDropdown"><span class="current" id="current"></span><div id="foo" class="list"><ul></ul></div></div><span><i class="fas fa-university"></i></span>');
+                var dropdown = $(this).next();
+                var options = $(select).find('option');
+                var selected = $(this).find('option:selected');
+                dropdown.find('.current').html(selected.data('display-text') || selected.text());
+                options.each(function(j, o) {
+                    var display = $(o).data('display-text') || '';
+                    dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+                });
+            }
+        });
+    }
+
+    // Event listeners
+
+    // Open/close
+    $(document).on('click', '.dropdown', function(event) {
+        $('.dropdown').not($(this)).removeClass('open');
+        $(this).toggleClass('open');
+        if ($(this).hasClass('open')) {
+            $(this).find('.option').attr('tabindex', 0);
+            $(this).find('.selected').focus();
+        } else {
+            $(this).find('.option').removeAttr('tabindex');
+            $(this).focus();
+        }
+    });
+    // Close when clicking outside
+    $(document).on('click', function(event) {
+        if ($(event.target).closest('.dropdown').length === 0) {
+            $('.dropdown').removeClass('open');
+            $('.dropdown .option').removeAttr('tabindex');
+        }
+        event.stopPropagation();
+    });
+    // Option click
+    $(document).on('click', '.dropdown .option', function(event) {
+        $(this).closest('.list').find('.selected').removeClass('selected');
+        $(this).addClass('selected');
+        var text = $(this).data('display-text') || $(this).text();
+        $(this).closest('.dropdown').find('.current').text(text);
+        var s = $("#universityInput").val(text);
+        $(this).closest('.dropdown').prev('select').val($(this).data('value')).trigger('change');
+    });
+
+    // Keyboard events
+    $(document).on('keydown', '.dropdown', function(event) {
+        var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+        // Space or Enter
+        if (event.keyCode == 32 || event.keyCode == 13) {
+            if ($(this).hasClass('open')) {
+                focused_option.trigger('click');
+            } else {
+                $(this).trigger('click');
+            }
+            return false;
+            // Down
+        } else if (event.keyCode == 40) {
+            if (!$(this).hasClass('open')) {
+                $(this).trigger('click');
+            } else {
+                focused_option.next().focus();
+            }
+            return false;
+            // Up
+        } else if (event.keyCode == 38) {
+            if (!$(this).hasClass('open')) {
+                $(this).trigger('click');
+            } else {
+                var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
+                focused_option.prev().focus();
+            }
+            return false;
+            // Esc
+        } else if (event.keyCode == 27) {
+            if ($(this).hasClass('open')) {
+                $(this).trigger('click');
+            }
+            return false;
+        }
+    });
+
+    $(document).ready(function() {
+        create_custom_dropdowns();
+    });
+</script>
+
+
+</body>
+</html>
