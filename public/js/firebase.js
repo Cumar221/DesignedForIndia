@@ -11,9 +11,15 @@ var config = {
 firebase.initializeApp(config);
 
 var ref = firebase.database().ref('userCount');
-ref.on('value', function(snap) {
-    document.getElementById("userCount").innerHTML = snap.val();
-});
+//ref.on('value', function(snap) {
+  //  document.getElementById("userCount").innerHTML = snap.val();
+//});
+
+ref.once("value")
+    .then(function(snapshot) {
+        var counter = snapshot.val();
+        document.getElementById("userCount").innerHTML = counter;
+    });
 
 function pushFirebase() {
     const fb = firebase.database().ref();
