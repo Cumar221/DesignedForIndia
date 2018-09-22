@@ -49200,129 +49200,13 @@
                 '<div class="o-landing__about">\n        ' +
                 '<div class="c-intro-about"> <img class="c-intro-about__headline" src="images/about.png"></div>\n     </div>\n\n    ' +
                 '<div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n   <div class="o-landing__featured">\n            <div class="c-divider">\n                <span>SWIPE LEFT TO ENTER</span>\n   <div class="c-divider__arrows"></div>\n            </div>\n            ' +
-                '<div class="o-featured" style="background:white; width: '+ (screenSize-50) +'px; overflow: hidden;">' +
-                    '<img src="images/backgroundPage2.png" style="position: absolute; bottom: 0;">' +
-                    '<div class="quoteDiv"><img src="images/quote.png"></div>' +
-                    '<div id="cf">' +
-                        '<img src="/images/1.jpg"  alt="Image 1"/>' +
-                        '<img src="/images/2.jpg"  alt="Image 2"/>' +
-                        '<img src="/images/3.jpg"  alt="Image 3"/>' +
-                        '<img src="/images/4.jpg"  alt="Image 1"/>' +
-                        '<img src="/images/5.jpg"  alt="Image 1"/>' +
-                        '<img src="/images/6.jpg"  alt="Image 2"/>' +
-
-                        '<img src="/images/8.jpg"  alt="Image 1"/>' +
-                        '<img src="/images/9.jpg"  alt="Image 1"/>' +
-                        '<img src="/images/10.jpg" alt="Image 1"/>' +
-                        '<img src="/images/11.jpg" alt="Image 1"/>' +
-                        '<img src="/images/12.jpg" alt="Image 1"/>' +
-                        '<img src="/images/13.jpg" alt="Image 1"/>' +
-                        '<img src="/images/14.jpg" alt="Image 1"/>' +
-                    '</div>' +
-
-                    '<div class="container">' +
-                        '<div class="bird-container2 bird-container--one">'+
-                            '<div class="bird bird--one"></div>' +
-                        '</div>' +
-                        '<div class="bird-container2 bird-container--two">' +
-                            '<div class="bird bird--two"></div>' +
-                        '</div>' +
-                        '<div class="bird-container2 bird-container--three">' +
-                            '<div class="bird bird--three"></div>' +
-                        '</div>' +
-                        '<div class="bird-container2 bird-container--four">' +
-                            '<div class="bird bird--four"></div>' +
-                        '</div>' +
-                    '</div>' +
-                    '<div class="container">' +
-                        '<div class="bird-container bird-container--five">'+
-                            '<div class="bird bird--five"></div>' +
-                        '</div>' +
-                        '<div class="bird-container bird-container--six">' +
-                            '<div class="bird bird--six"></div>' +
-                        '</div>' +
-                        '<div class="bird-container bird-container--seven">' +
-                            '<div class="bird bird--seven"></div>' +
-                        '</div>' +
-                        '<div class="bird-container bird-container--eight">' +
-                            '<div class="bird bird--eight"></div>' +
-                        '</div>' +
-                    '</div>' +
+                '<div class="o-featured pg2background" style="background-color:white; width: '+ (screenSize-50) +'px; overflow: hidden;">' +
                 '</div>' +
                 '<div class="smooth-scrollbar o-landing__featured-scrollbar" style="height: 100%;">\n   <div class="o-landing__featured" style="left:0;">\n            <div class="c-divider">\n                <span>SWIPE LEFT TO SUBSCRIBE</span>\n   <div class="c-divider__arrows"></div>\n            </div>\n            ' +
-
-                '<div class="o-featured" style="background:white; width: '+ screenSize +'px; overflow:hidden">' +
-                '<img src="/images/page3.png" style="position: absolute; bottom: 0; z-index: -1">'+
-                '<div class="monkey-tree" >' +
-                    '<div class="monkey1 monkey--one"></div>' +
-                    '<img src="/images/tree.png" >' +
-                '</div>' +
+                '<div class="o-featured pg3background" style="background-color:white; width: '+ screenSize +'px; overflow:hidden">' +
                 '<div class="userSubscribe" style="z-index: -1">  ' +
-                    '<img src="/images/tree.png" style="position: absolute; z-index: -1; margin-top: -70%; ;">' +
-                    '<img src="/images/board.png">' +
                     '<h1 id="userCount">%</h1>' +
-                    '<h5>SUBSCRIBERS</h5>' +
-                    '<div class="birdV2 birdV2--one"></div>' +
                 '</div>' +
-                '<div class="container">' +
-                '<div class="bird-container2 bird-container--one">'+
-                '<div class="bird bird--one"></div>' +
-                '</div>' +
-                '<div class="bird-container2 bird-container--two">' +
-                '<div class="bird bird--two"></div>' +
-                '</div>' +
-                '<div class="bird-container2 bird-container--three">' +
-                '<div class="bird bird--three"></div>' +
-                '</div>' +
-                '<div class="bird-container2 bird-container--four">' +
-                '<div class="bird bird--four"></div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="container">' +
-                '<div class="bird-container bird-container--five">'+
-                '<div class="bird bird--five"></div>' +
-                '</div>' +
-                '<div class="bird-container bird-container--six">' +
-                '<div class="bird bird--six"></div>' +
-                '</div>' +
-                '<div class="bird-container bird-container--seven">' +
-                '<div class="bird bird--seven"></div>' +
-                '</div>' +
-                '<div class="bird-container bird-container--eight">' +
-                '<div class="bird bird--eight"></div>' +
-                '</div>' +
-                '</div>' +
-                '<div class="giraffe-container giraffe-container--one">' +
-                    '<div class="giraffe giraffe--one"></div>' +
-                '</div>' +
-                '<div class="giraffe-container giraffe-container--two">' +
-                    '<div class="giraffe giraffe--two"></div>' +
-                '</div>' +
-                '<div class="giraffe-container giraffe-container--three">' +
-                    '<div class="giraffe giraffe--three"></div>' +
-                '</div>' +
-                '<div class="giraffe-container giraffe-container--four">' +
-                    '<div class="giraffe giraffe--four"></div>' +
-                '</div>' +
-                '<div class="giraffe-container giraffe-container--five">' +
-                    '<div class="giraffe giraffe--five"></div>' +
-                '</div>' +
-                '<div class="lion-container lion-container--one">' +
-                '<div class="lion lion--one"></div>' +
-                '</div>' +
-                '<div class="lion-container lion-container--two">' +
-                '<div class="lion lion--two"></div>' +
-                '</div>' +
-                '<div class="elephant-container elephant-container--one">' +
-                    '<div class="elephant elephant--one"></div>' +
-                '</div>' +
-                '<div class="elephant-container elephant-container--two">' +
-                '<div class="elephant elephant--two"></div>' +
-                '</div>' +
-                '<div class="elephant-container elephant-container--three">' +
-                '<div class="elephant elephant--three"></div>' +
-                '</div>' +
-
                 '<div  class="button-register" id="registerButton"><button type="button" onclick="registerFunction()" class="button"/>SUBSCRIBE</button> </div>'+
                         '<div id="thankYouDiv" class="thank-div"><button class="button" disabled>THANK YOU</button> <h2>We will be in touch soon!</h2></div>'+
                         '<div id="myform" class="form" style="display:none">' +
@@ -49404,7 +49288,7 @@
                                             '<input type="radio" name="mobile" value="Android" id="mobileChoice2"> <label for="mobileChoice2">Android</label>'+
                                         '</div> '+
                                     '<button type="submit" class="button button-block"/>REGISTER</button>'+
-        '</form>'+
+                            '</form>'+
                             '</div>' +
                         '</div>' +
                 '</div>'+
