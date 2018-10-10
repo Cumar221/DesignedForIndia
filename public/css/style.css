@@ -1,25 +1,22 @@
 @font-face {
     font-family: 'Helvetica-Neue';
-    src: url("../fonts/helvetica-neue.woff2") format("woff2"),url("../fonts/helvetica-neue.woff") format("woff");
+    src: url("../fonts/helvetica-neue.woff2") format("woff2");
     font-weight: 400
 }
 
 @font-face {
     font-family: 'Helvetica-Neue';
-    src: url("../fonts/helvetica-neue-light.woff2") format("woff2"),url("../fonts/helvetica-neue-light.woff") format("woff");
+    src: url("../fonts/helvetica-neue-light.woff2") format("woff2");
     font-weight: 100
 }
 
 @font-face {
     font-family: 'Museo';
-    src: url("../fonts/exljbris - Museo-300.otf") format("otf");
-    font-weight: 300
-}
+    src: url('../fonts/exljbris-museo-300-webfont.woff2') format('woff2'),
+    url('../fonts/exljbris-museo-300-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-@font-face {
-    font-family: 'Museo';
-    src: url("../fonts/exljbris - Museo-500.otf") format("otf");
-    font-weight: 500
 }
 
 html {
@@ -2535,6 +2532,7 @@ button {
 }
 
 .c-divider span {
+    font-family: Museo;
     white-space: nowrap;
     -ms-transform: rotate(-90deg) translateY(-580%);
     transform: rotate(-90deg) translateY(-580%);
@@ -2959,292 +2957,6 @@ h1 {
     100% {
         -webkit-transform: translateY(0vh) translateX(110vw) scale(0.45);
         transform: translateY(0vh) translateX(110vw) scale(0.45);
-    }
-}
-
-.elephant {
-    width: 20.176471px;
-    height: 10px;
-    position: relative;
-    overflow: hidden;
-    background-image: url(../images/elephant2.png);
-    background-blend-mode: soft-light;
-    background-size: auto 100%;
-    will-change: background-position;
-    -webkit-animation-name: elephant-cycle;
-    animation-name: elephant-cycle;
-    -webkit-animation-timing-function: steps(20);
-    animation-timing-function: steps(20);
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    text-align: center;
-}
-
-.elephant--one {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-
-.elephant--two {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-
-.elephant--three {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-
-.elephant-container{
-    position: fixed;
-    top: 97%;
-    left: 15%;
-    -webkit-transform: scale(0) translateX(110vw);
-    transform: scale(0) translateX(110vw) rotate(360deg) scaleX(-1);
-    will-change: transform;
-    -webkit-animation-name: moveX;
-    animation-name: moveX;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.elephant-container--one {
-    -webkit-animation-duration: 300s;
-    animation-duration: 300s;
-    -webkit-animation-delay: 1.75s;
-    animation-delay: 1.75s;
-}
-
-.elephant-container--two {
-    -webkit-animation-duration: 300s;
-    animation-duration: 300s;
-    -webkit-animation-delay: -180.0s;
-    animation-delay: 80.0s;
-}
-
-.elephant-container--three {
-    -webkit-animation-duration: 300s;
-    animation-duration: 300s;
-    -webkit-animation-delay: 180.0s;
-    animation-delay: 180.0s;
-}
-
-
-@-webkit-keyframes elephant-cycle {
-    100% {
-        background-position: -360px;
-    }
-}
-
-@keyframes elephant-cycle {
-    100% {
-        background-position: -360px;
-    }
-}
-
-.lion {
-    width: 20.176471px;
-    height: 10px;
-    position: relative;
-    overflow: hidden;
-    background-image: url(../images/lion.png);
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-size: auto 100%;
-    will-change: background-position;
-    -webkit-animation-name: lion-cycle;
-    animation-name: lion-cycle;
-    -webkit-animation-timing-function: steps(8);
-    animation-timing-function: steps(8);
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    text-align: center;
-    background-position: center center;
-}
-
-.lion--one {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-
-.lion--two {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-
-}
-
-.lion-container{
-    position: fixed;
-    top: 97%;
-    left: 15%;
-    -webkit-transform: scale(0) translateX(110vw);
-    transform: scale(0) translateX(110vw) rotate(360deg) scaleX(-1);
-    will-change: transform;
-    -webkit-animation-name: moveX;
-    animation-name: moveX;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.lion-container--one {
-    -webkit-animation-duration: 280s;
-    animation-duration: 280s;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-
-.lion-container--two {
-    -webkit-animation-duration: 280s;
-    animation-duration: 280s;
-    -webkit-animation-delay: 180.75s;
-    animation-delay: 180.75s;
-}
-
-
-
-@-webkit-keyframes lion-cycle {
-    100% {
-        background-position: -340px;
-    }
-}
-
-@keyframes lion-cycle {
-    100% {
-        background-position: -340px;
-    }
-}
-
-
-.giraffe {
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-image: url(../images/giraffe.png);
-    background-blend-mode: soft-light;
-    background-size: cover;
-    background-size: auto 100%;
-    will-change: background-position;
-    -webkit-animation-name: fly-cycle;
-    animation-name: fly-cycle;
-    -webkit-animation-timing-function: steps(15);
-    animation-timing-function: steps(15);
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    text-align: center;
-    background-position: center center;
-}
-.giraffe--one {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-.giraffe--two {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-.giraffe--three {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-.giraffe--four {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-.giraffe--five {
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
-}
-
-.giraffe-container{
-    position: fixed;
-    top: 93%;
-    left: 15%;
-    -webkit-transform: scale(0) translateX(110vw);
-    transform: scale(0) translateX(110vw) rotate(360deg) scaleX(-1);
-    will-change: transform;
-    -webkit-animation-name: giraffeMoveX;
-    animation-name: giraffeMoveX;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.giraffe-container--one {
-    -webkit-animation-duration: 150s;
-    animation-duration: 150s;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-.giraffe-container--two {
-    -webkit-animation-duration: 150s;
-    animation-duration: 150s;
-    -webkit-animation-delay: 100s;
-    animation-delay: 100s;
-}
-.giraffe-container--three {
-    -webkit-animation-duration: 150s;
-    animation-duration: 150s;
-    -webkit-animation-delay: 200s;
-    animation-delay: 200s;
-}
-.giraffe-container--four {
-    -webkit-animation-duration: 150s;
-    animation-duration: 150s;
-    -webkit-animation-delay: 300s;
-    animation-delay: 300s;
-}
-
-.giraffe-container--five {
-    -webkit-animation-duration: 150s;
-    animation-duration: 150s;
-    -webkit-animation-delay: 400s;
-    animation-delay: 400s;
-}
-
-@keyframes giraffeMoveX{
-    0% {
-        -webkit-transform: translateX(20vw) scale(0.6);
-        transform: translateX(20vw) scale(0.6);
-    }
-
-    40% {
-        -webkit-transform: translateX(-10vw) scale(0.6);
-        transform: translateX(-10vw) scale(0.6);
-    }
-
-    60% {
-        -webkit-transform: translateX(-30vw) scale(0.6);
-        transform: translateX(-30vw) scale(0.6);
-    }
-    100% {
-        -webkit-transform: translateX(60vw) scale(0.6);
-        transform: translateX(-60vw) scale(0.6);
     }
 }
 
@@ -4216,16 +3928,53 @@ a:hover {
     padding: .31rem .75rem;
 }
 
+.img-container{
+    text-align: center;
+    color: white;
+}
+
+.peacock-container{
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    width: 40%;
+}
+
+.elephant-container{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40%;
+}
+
+.lion-container{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 40%;
+}
+
+.giraffe-container{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 40%;
+}
+
+.userSubscribe {
+    position: absolute;
+    width: 100%;
+}
+.userSubscribe h1 {
+    font-size: 15px;
+    right: 117px;
+    top: 59px;
+    color: #f9f5f5;
+    position: absolute;
+}
+
 
 @media (min-width: 300px) and (max-width: 600px) {
-    .pg2background{
-        background-image: url("../images/gif2.gif");
-        background-size: 100% 100%;
-    }
-    .pg3background{
-        background-image: url("../images/gif3.gif");
-        background-size: 100% 100%;
-    }
     .dropdown-content input{
         margin-top: 5px;
 
@@ -4295,40 +4044,9 @@ a:hover {
         margin-left: 80%;
         margin-top: 10px;
     }
-    .userSubscribe {
-        margin-top: 23px;
-        margin-left: 60%;
-        text-align: center;
-        position: absolute;
-        height: 150px;
-        width: 39%;
-    }
-    .userSubscribe h1 {
-        font-size: 10px;
-        margin-top: -22%;
-        color: white;
-    }
-    .userSubscribe h5 {
-        font-family: Museo;
-        text-align: center;
-        font-size: 9px;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 3;
-        margin-top: 1%;
-        color: white;
-    }
 }
 
 @media (min-width: 600.1px) and (max-width: 1016px) {
-    .pg2background{
-        background-image: url("../images/gif2.gif");
-        background-size: 100% 100%;
-    }
-    .pg3background{
-        background-image: url("../images/gif3.gif");
-        background-size: 100% 100%;
-    }
     .dropdown-content input{
         margin-top: 10px;
 
@@ -4368,42 +4086,10 @@ a:hover {
         margin-left: 85%;
         margin-top: 20px;
     }
-    .userSubscribe{
-        margin-top: 40px;
-        text-align: center;
-        position: absolute;
-        height: 150px;
-        margin-left: 78%;
-        width: 22%;
-    }
-    .userSubscribe h1 {
-        font-size: 20px;
-        margin-top: -25%;
-        color: white;
-    }
-    .userSubscribe h5 {
-        font-family: Museo;
-        color: black;
-        text-align: center;
-        font-size: 10px;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 3;
-        margin-top: -1%;
-        color: white;
-        color: white;
-    }
+
 }
 
 @media (min-width: 1016.1px) and (max-width: 2560px) {
-    .pg2background{
-        background-image: url("../images/gif2.gif");
-        background-size: 100% 100%;
-    }
-    .pg3background{
-        background-image: url("../images/gif3.gif");
-        background-size: 100% 100%;
-    }
     .dropdown-content input{
         margin-top: 10px;
 
@@ -4438,33 +4124,6 @@ a:hover {
         padding: 25px;
         margin-left: 90%;
         margin-top: 55px;
-    }
-
-    .userSubscribe{
-        margin-top: 40px;
-        text-align: center;
-        position: absolute;
-        height: 150px;
-        margin-left: 78%;
-        width: 22%;
-    }
-
-    .userSubscribe h1 {
-        font-size: 25px;
-        margin-top: -26%;
-        color: white;
-    }
-
-    .userSubscribe h5 {
-        font-family: Museo;
-        color: black;
-        text-align: center;
-        font-size: 15px;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 3;
-        margin-top: -0%;
-        color: white;
     }
 }
 
