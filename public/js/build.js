@@ -49192,9 +49192,6 @@
             , L = n(A)
             , C = function() {
 
-
-
-
             let screenSize = screen.width;
             return '\n    ' +
                 '<div class="o-landing__about">\n        ' +
@@ -49233,12 +49230,13 @@
                     '<h1 id="userCount">%</h1>' +
                 '</div>'+
                 '<div class="img-container">' +
-                    '<img src="/images/page3.png" style="position: fixed; bottom: 0; z-index: -1">'+
+                    '<img src="/images/page3.png" style="position: absolute; bottom: 0; z-index: -1">'+
                     '<div class="giraffe-container">' +
                         '<img src="../images/giraffe.gif">'+
                     '</div>'+
                     '<div class="elephant-container">' +
                         '<img src="../images/elephant.gif"  >'+
+
                     '</div>'+
                     '<div class="lion-container">' +
                         '<img src="../images/lion.gif"  >'+
@@ -49248,89 +49246,54 @@
                     '</div>'+
                 '</div>'+
                 '<div  class="button-register" id="registerButton"><button type="button" onclick="registerFunction()" class="button"/>SUBSCRIBE</button> </div>'+
-                '<div id="thankYouDiv" class="thank-div"><button class="button" disabled>THANK YOU</button> <h2>We will be in touch soon!</h2></div>'+
                 '<div id="myform" class="form" style="display:none">' +
-                '<div id="signup" style="overflow:hidden" >' +
-                '<form id="orm" onsubmit="return pushFirebase()">'+
-                '<h1 class="h1SignUp">BE PART OF SOMETHING AWESOME!</h1>' +
-                '<h1 class="h1SignUp" id="demo">Hi,</h1>'+
-                '<input id="firstNameInput" oninput="myFunction()" class="form-control signup-content" type="text" placeholder="First Name*" required autocomplete="off"/><span><i class="fas fa-user"></i></span>'+
-                '<input id="lastNameInput" class="form-control signup-content" type="text" placeholder="Last Name*" required autocomplete="off" /><span><i class="fas fa-user"></i></span>'+
-                '<input id="ageInput" onClick="ageFunction()" class="form-control dropbtn signup-content" type="text" placeholder="Age Group*" required autocomplete="off" onkeydown="return false"/><span><i class="fas fa-calendar-alt"></i></span>'+
-                '<div id="ageDropdown" class="dropdown-content">' +
-                '<input type="radio" name="age" value="18-21 Years" id="ageChoice1"> <label for="ageChoice1">18-21 Years</label><hr>'+
-                '<input type="radio" name="age" value="22-25 Years" id="ageChoice2"> <label for="ageChoice2">22-25 Years</label><hr>'+
-                '<input type="radio" name="age" value="26+ Years" id="ageChoice3"> <label for="ageChoice3">26+ Years</label> ' +
-                '</div> '+
-                '<select class="mycontainer" required>' +
-                '<option value="0">University*</option>'+
-                '<option value="1">Amity University</option>'+
-                '<option value="2">Anna University</option>' +
-                '<option value="3">Annamalai University</option>' +
-                '<option value="4">Bangalore University</option>' +
-                '<option value="5">Central University of Punjab</option>' +
-                '<option value="6">Chandigarh University</option>' +
-                '<option value="7">Chitkara University</option>' +
-                '<option value="8">Delhi Technological University</option>' +
-                '<option value="9">Dr. A.P.J. Abdul Kalam Technical University</option>' +
-                '<option value="10">Goa University</option>' +
-                '<option value="11">Gujarat University</option>' +
-                '<option value="12">Indian Institute of Technology Bombay</option>' +
-                '<option value="13">Indian Institute of Technology Delhi</option>' +
-                '<option value="14">Indian Institute of Technology Kanpur</option>' +
-                '<option value="15">Indian Institute of Technology Kharagpur</option>' +
-                '<option value="16">Indian Institute of Technology Madras</option>' +
-                '<option value="17">Indian Institute of Technology, BHU</option>' +
-                '<option value="18">International Institute of Information Technology Bangalore</option>' +
-                '<option value="19">Jadavpur University</option>' +
-                '<option value="20">Jaipur National University</option>' +
-                '<option value="21">Jawaharlal Nehru Technological University</option>' +
-                '<option value="22">Jawaharlal Nehru University</option>' +
-                '<option value="23">Kannada University</option>' +
-                '<option value="24">Kurukshetra University</option>' +
-                '<option value="25">Maharishi Dayanand University</option>' +
-                '<option value="26">Malaviya National Institute of Technology, Jaipur</option>' +
-                '<option value="27">Mangalore University</option>' +
-                '<option value="28">National Institute of Technology, Calicut</option>' +
-                '<option value="29">National Institute of Technology, Jamshedpur</option>' +
-                '<option value="30">National Institute of Technology, Rourkela</option>' +
-                '<option value="31">National Institute of Technology, Tiruchirappalli</option>' +
-                '<option value="32">Osmania University</option>' +
-                '<option value="33">Panjab University</option>' +
-                '<option value="34">Pondicherry University</option>' +
-                '<option value="35">Savitribai Phule Pune University</option>' +
-                '<option value="36">University of Calcutta</option>' +
-                '<option value="37">University of Calicut</option>' +
-                '<option value="38">University of Delhi</option>' +
-                '<option value="39">University of Hyderabad</option>' +
-                '<option value="40">University of Kashmir</option>' +
-                '<option value="41">University of Kashmir</option>' +
-                '<option value="42">University of Kerala</option>' +
-                '<option value="43">University of Lucknow</option>' +
-                '<option value="44">University of Madras</option>' +
-                '<option value="45">University of Mumbai</option>' +
-                '<option value="46">University of Mysore</option>' +
-                '<option value="47">University of Rajasthan</option>' +
-                '<option value="48">Visvesvaraya Technological University</option>' +
-                '<option value="49">VIT University</option>' +
-                '</select>' +
-                '<input  id="emailInput" class="form-control signup-content" type="email" placeholder="Email Address*" required autocomplete="off"/><span><i class="fas fa-envelope"></i></span>'+
-                '<div class="input-group mb-2" style="position: initial; margin-bottom: 5px!important;">' +
-                '<div class="input-group-prepend">' +
-                '<span class="input-group-text" id="basic-addon1">+91</span>' +
+                    '<div id="signup" >' +
+                        '<form id="orm" onsubmit="return pushFirebase()">'+
+                            '<img style="margin: 0 auto;" src="/images/dice1.gif" loop=infinite >'+
+                            '<div class="input-box"></div>'+
+                            '<div class="tab">' +
+                                '<span><label class="tab-label">Name</label></span>'+
+                                '<input id="nameInput" class="form-control signup-content" type="text" required autocomplete="off"/>' +
+                                '<button type="button" onclick="nextTab(1)" style="position:absolute">' +
+                                    '<i class="fas fa-arrow-circle-left"></i>'+
+                                '</button>'+
+                            '</div>' +
+                            '<div class="tab">' +
+                                '<span><label class="tab-label">Email</label></span>'+
+                                '<input  id="emailInput" class="form-control signup-content" type="email" required autocomplete="off"/>'+
+                                '<button type="button" onclick="nextTab(1)" style="position:absolute">' +
+                                    '<i class="fas fa-arrow-circle-left"></i>'+
+                                '</button>'+
+                            '</div>' +
+                            '<div class="tab">' +
+                                '<span><label class="tab-label">Phone</label></span>'+
+                                '<span><label class="tab-label-number">+91</label></span>'+
+                                '<input id="mobileNumberInput" type="text" style="text-indent: 83px;"class="form-control signup-content" required autocomplete="off">'+
+                                '<button type="button" onclick="nextTab(1)" style="position:absolute">' +
+                                    '<i class="fas fa-arrow-circle-left"></i>'+
+                                '</button>'+
+                            '</div>' +
+                            '<div class="tab">' +
+                                '<span><label class="tab-label">Device</label></span>'+
+
+                                '<input  id="mobileDeviceInput" style="color: #fcfcfc" class="form-control signup-content" type="text" required autocomplete="off" />'+
+                                '<div id="mobileDropdown" class="deviceChoice">' +
+                                    '<input type="radio" name="mobile" id="ios" value="iOS">'+
+                                    '<label class="deviceLabel" for="ios">iOS</label>'+
+                                    '<input type="radio" name="mobile" id="android" value="Android">'+
+                                    '<label class="deviceLabel" for="android" style="margin-left: -26px;">Android</label>'+
+                                '</div>'+
+                                '<button type="button" onclick="nextTab(1)" style="position:absolute">' +
+                                    '<i class="fas fa-arrow-circle-left"></i>'+
+                                '</button>'+
+                            '</div>' +
+                            '<div class="tab">' +
+                                '<button type="submit" class="button"/>SUBSCRIBE</button>'+
+                            '</div>' +
+                        '</form>'+
+                    '</div>' +
                 '</div>' +
-                '<input id="mobileNumberInput" type="text" class="form-control signup-content" style="flex: inherit; width: 78%;"placeholder="Mobile Number*" required autocomplete="off" aria-describedby="basic-addon1">'+
-                '<span><i class="fas fa-phone"></i></span>'+
-                '</div>'+
-                '<input  id="mobileDeviceInput" onClick="mobileFunction()" class="form-control dropbtn signup-content" type="text" placeholder="Mobile Device*" required autocomplete="off" onkeydown="return false"/><span><i class="fas fa-mobile"></i></span>'+
-                '<div id="mobileDropdown" class="dropdown-content">' +
-                '<input type="radio" name="mobile" value="iOS" id="mobileChoice1"> <label for="mobileChoice1">iOS</label><hr>'+
-                '<input type="radio" name="mobile" value="Android" id="mobileChoice2"> <label for="mobileChoice2">Android</label>'+
-                '</div> '+
-                '<button type="submit" class="button button-block"/>REGISTER</button>'+
-                '</form>'+
-                '</div>' +
-                '</div>' +
+                '<div id="thankYouDiv" class="thank-div"><button class="button" disabled>THANK YOU</button> <h2>We will be in touch soon!</h2></div>'+
                 '</div>'+
                 '</div>'
         }

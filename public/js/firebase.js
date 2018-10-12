@@ -11,15 +11,15 @@ var config = {
 firebase.initializeApp(config);
 
 var ref = firebase.database().ref('userCount');
-//ref.on('value', function(snap) {
-  //  document.getElementById("userCount").innerHTML = snap.val();
-//});
 
-ref.once("value")
-    .then(function(snapshot) {
-        var counter = snapshot.val();
-        document.getElementById("userCount").innerHTML = counter;
-    });
+ref.on("value", function(snapshot) {
+    document.getElementById("userCount").innerHTML = snapshot.val();
+}, function (errorObject) {
+    console.log(errorObject);
+    document.getElementById("userCount").innerHTML = "*";
+});
+
+
 
 function pushFirebase() {
     const fb = firebase.database().ref();
@@ -28,15 +28,12 @@ function pushFirebase() {
     errorForm = document.getElementById("orm");
 
 
-    first_name = document.getElementById("firstNameInput").value;
-    last_name = document.getElementById("lastNameInput").value;
-    age = document.getElementById("ageInput").value;
-    university = document.getElementById("current").innerHTML;
-    email = document.getElementById("emailInput").value;
-    mobile_number = document.getElementById("mobileNumberInput").value;
-    mobile_device= document.getElementById("mobileDeviceInput").value;
+    Name = document.getElementById("nameInput").value;
+    Email = document.getElementById("emailInput").value;
+    Phone = document.getElementById("mobileNumberInput").value;
+    Device= document.getElementById("mobileDeviceInput").value;
 
-    data = {first_name,last_name,age,university,email,mobile_number,mobile_device};
+    data = {Name,Email,Phone,Device};
 
     fb.child('users/').push(data, function(error) {
         if (error)

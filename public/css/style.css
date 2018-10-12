@@ -3528,15 +3528,18 @@ a:hover {
 }
 
 .form {
+    padding-top: 0;
+    padding-right: 27px;
+    padding-left: 27px;
+    padding-bottom: 27px;
+    margin: 0 auto;
+    top: 37%;
+    position: relative;
     height: fit-content;
     overflow: hidden;
     z-index: 1;
-    width: 100%;
+    width: 350px;
     background: white;
-    padding: 27px;
-    max-width: 373px;
-    margin-bottom: 100px;
-    margin: 84px auto;
     border-radius: 30px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
@@ -3574,9 +3577,8 @@ a:hover {
 }
 
 i{
-    background: #A9A9A9;
+    background: black;
     margin-left: 0px;
-    position: absolute;
     font-size: 19px;
     display: block;
     width: 40px;
@@ -3586,7 +3588,6 @@ i{
     color: white;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
-    margin-bottom: 20px;
     transition: border-color .25s ease, box-shadow .25s ease;
 
 
@@ -3626,10 +3627,11 @@ textarea {
 }
 
 .button {
+    width: 100%;
     border: 0;
     outline: none;
-    border-radius: 35px;
-    padding: 10px 0;
+    border-radius: 5px;
+    padding: 7px 7px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -3640,12 +3642,6 @@ textarea {
 }
 .button:hover, .button:focus {
     background: #0a0e0d;
-}
-
-.button-block {
-    width: 45%;
-    margin-left: 28%;
-    margin-top: 3px;
 }
 
 .forgot {
@@ -3889,10 +3885,10 @@ a:hover {
 .thank-div{
     color: black;
     display: none;
+    top: 44%;
+    position: relative;
     text-align: center;
-    margin: 19em auto;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin: 0 auto;
 }
 
 .thank-div button{
@@ -3908,18 +3904,16 @@ a:hover {
 
 
 .button-register{
+    margin: 0 auto;
     color: black;
     text-align: center;
     height: 0;
-    top: 53%;
-    right: 40%;
-    position: absolute;
+    top: 44%;
+    position: relative;
 }
 
 .button-register button{
     font-size: 30px;
-    padding-right: 20px;
-    padding-left: 20px;
     margin-bottom: 13px;
 }
 
@@ -3973,6 +3967,72 @@ a:hover {
     position: absolute;
 }
 
+.tab {
+    display: none;
+}
+
+.tab input {
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+}
+
+.tab input { text-indent: 55px;}
+.tab .tab-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    background: black;
+    left: 28px;
+    width: 60px;
+    height: 39px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.tab .tab-label-number {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    left: 73px;
+    width: 60px;
+    height: 39px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.deviceChoice{
+    color: black;
+    font-size: 19px;
+    position: absolute;
+    bottom: 38px;
+    left: 26%;
+}
+
+input[type=radio]{
+    visibility:hidden;
+}
+
+input[type=radio]:checked + label{
+    background: black;
+    color: white;
+}
+
+.deviceLabel{
+    padding: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.input-box{
+    z-index: 1;
+    position: absolute;
+    background: black;
+    height: 39px;
+    width: 0;
+    right: 55px;
+}
 
 @media (min-width: 300px) and (max-width: 600px) {
     .dropdown-content input{
@@ -3989,18 +4049,7 @@ a:hover {
         margin-top: 23%;
         right: 0;
     }
-    .button-register {
-        right: 33% !important;
-    }
-    .button-register button {
-        font-size: 9px !important;
-    }
-    .bird-container3 {
-        bottom: 10px;
-    }
-    .button{
-        font-size: 10px;
-    }
+
     .dropdown {
         font-size: 11px;
         height: 28px;
@@ -4010,25 +4059,12 @@ a:hover {
     .h1SignUp{
         font-size: 9px;
     }
-    .form {
-        width: 245px;
-        margin: 90px auto;
-    }
-    #mobileNumberInput {
-        width: 70% !important;
-    }
+
     .mycontainer{
         margin-bottom: 5px;
     }
-    i{
-        font-size: 16px;
-        width: 35px;
-        padding: 5px;
-    }
     .signup-content{
-        padding: 4px 8px;
-        font-size: 14px;
-        margin-bottom: 5px;
+        padding: 8px 8px;
     }
     .quoteDiv{
         width:80%;
@@ -4054,20 +4090,14 @@ a:hover {
     .dropdown-content label {
         font-size: 16px;
     }
-    .button-register {
-        right: 33% !important;
-    }
     .monkey-tree{
         position: absolute;
         z-index: -1;
         margin-top: 13%;
         right: 0;
     }
-    .form{
-        margin: 25% auto;
-    }
     .signup-content{
-        padding-top: 6px;
+        padding-top: 7px;
         padding-right: 36px;
         padding-bottom: 9px;
         padding-left: 9px;
@@ -4104,7 +4134,7 @@ a:hover {
         right: 0;
     }
     .signup-content{
-        padding-top: 6px;
+        padding-top: 7px;
         padding-right: 36px;
         padding-bottom: 9px;
         padding-left: 9px;
